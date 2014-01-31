@@ -1,3 +1,27 @@
+############# for calculating time of created from current time #################
+
+
+Working with dates
+
+// How old are you?
+var m = moment("Mar 26th, 1989", "MMM-DD-YYYY");
+
+console.log('You are '+m.fromNow() + ' old'); // You are 23 years ago old
+
+// Oops. We better leave the "ago" part out:
+console.log('You are '+m.fromNow(true) + ' old'); // You are 23 years old
+
+// When will the next world cup be?
+console.log( moment('June 12th, 2014','MMM DD YYYY').fromNow() ); // in 2 years
+
+// What will be the date 7 days from now?
+console.log( moment().add('days',7).format('MMMM Do, YYYY') ); // September 7th, 2012
+The fromNow() method is very useful in producing readable time differences. It automatically scales the period it returns from seconds to years.
+
+reference: http://tutorialzine.com/2012/08/quick-tip-handle-date-and-time-like-a-boss-with-moment-js/
+
+###############################################################################
+
 A lightweight javascript date library for parsing, validating, manipulating, and formatting dates.
 
 # [Documentation](http://momentjs.com/docs/)
